@@ -34,7 +34,7 @@
 - 📊 **Dashboard** – XP, coins, level, savings, activities
 - 💸 **Budget Tracker** – Set budgets, categorize expenses
 - 🎯 **Financial Goals** – Track savings goals
-- 📈 **Paper Trading** – Simulated stock trading
+- 📈 **Paper Trading** – Simulated stock trading 
 - 🛍️ **Store** – Spend coins on virtual items and coupons
 - 🕹️ **Gamification** – Earn XP & coins for smart habits
 - 🤖 **AI Advisor** – Integrated Gemini AI for advice
