@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-  Ai powered Finance literaccy App  💰📈  
+  Ai powered Finance literacy App  💰📈  
   <br>
   <i>Built with React, Vite, Tailwind, Node.js, Express, MongoDB</i>
 </p>
