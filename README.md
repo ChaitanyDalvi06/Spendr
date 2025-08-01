@@ -64,34 +64,41 @@
 git clone https://github.com/ChaitanyDalvi06/Spendr.git
 cd Spendr
 ```
-2. Setup Backend
-cd Backend
+
+# 2. Setup Backend
+```cd Backend
+npm install
+Configure environment variables in `.env`
+npm run dev
+```
+
+# 3. Setup Frontend
+```cd ../Frontend
 npm install
 # Configure environment variables in `.env`
 npm run dev
+```
 
-3. Setup Frontend
-cd ../Frontend
-npm install
-# Configure environment variables in `.env`
-npm run dev
-
-4. Access the App
-🌐 Frontend: http://localhost:5173
+4. Access the App <br>
+🌐 Frontend: http://localhost:5173 <br>
 🔌 Backend API: http://localhost:3001
 
-🧱 Project Structure
-Spendr/
+
+# 🧱 Project Structure
+```Spendr/
 ├── Backend/        # Express + MongoDB API
 ├── Frontend/       # React + Tailwind UI
 └── Landing page/   # Optional marketing page
+```
 
 🔐 Environment Variables
-Both frontend and backend require .env files:
+```Both frontend and backend require .env files:
 Frontend: API URLs, feature flags, etc.
 Backend: Mongo URI, JWT secrets, API keys
 Refer to .env.example or contact the maintainer.
-
+```
+ <br>
+ <br>
 📄 License
 MIT License
 
