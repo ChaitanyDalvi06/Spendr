@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-  Gamified personal finance app for teens & young adults 💰📈  
+  Ai powered Finance literaccy App  💰📈  
   <br>
   <i>Built with React, Vite, Tailwind, Node.js, Express, MongoDB</i>
 </p>
@@ -23,7 +23,7 @@
 🔧 **Tech Stack:**
 - **Frontend:** React + Vite + Tailwind CSS
 - **Backend:** Node.js + Express
-- **Database:** MongoDB
+- **Database:** MongoDB Compass
 
 ---
 
@@ -99,7 +99,8 @@ Refer to .env.example or contact the maintainer.
 ```
  <br>
  <br>
-📄 License
+
+```📄 License
 MIT License
 
 Copyright (c) 2025 Chaitanya Dalvi
@@ -121,6 +122,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,  
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN  
 THE SOFTWARE.
+```
 
 
 
