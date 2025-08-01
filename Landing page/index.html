@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spendr - Smart Financial Management</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'spektr-cyan-50': '#ecfeff',
+                        'primary': '#0f172a',
+                        'primary-foreground': '#f8fafc',
+                        'secondary': '#f1f5f9',
+                        'secondary-foreground': '#0f172a',
+                        'muted-foreground': '#64748b',
+                        'background': '#ffffff',
+                        'accent': '#f1f5f9',
+                        'accent-foreground': '#0f172a',
+                        'input': '#e2e8f0',
+                        'ring': '#3b82f6',
+                        'cyber-purple': '#8b5cf6',
+                        'cyber-blue': '#06b6d4',
+                        'dark-bg': '#0f0f23',
+                        'dark-secondary': '#1a1a2e',
+                        'dark-accent': '#16213e'
+                    },
+                    fontFamily: {
+                        'cyber': ['Inter', 'sans-serif']
+                    },
+                    boxShadow: {
+                        'cyber': '0 0 20px rgba(139, 92, 246, 0.3)',
+                        'cyber-lg': '0 25px 50px -12px rgba(139, 92, 246, 0.4)'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="futuristic-features.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- hero section -->
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.38/build/spline-viewer.js"></script>
+
+
+    <!-- Robo -->
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.56/build/spline-viewer.js"></script>
+    <style>
+        spline-viewer {
+            width: 100%;
+            height: 100%;
+            display: block;
+            pointer-events: none;
+        }
+        
+        /* Allow scroll on hero section */
+        .hero-section {
+            overflow-y: auto;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Enhanced Tubelight Navigation -->
+    <nav class="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-500 navbar hidden"
+        id="tubelightNav">
+        <div class="relative flex justify-center">
+            <!-- Main Navigation Container -->
+            <div
+                class="flex items-center justify-center backdrop-blur-3xl border border-white/20 rounded-2xl shadow-2xl px-4 py-3 relative overflow-hidden">
+                <!-- Background Glow -->
+                <div
+                    class="absolute inset-0 bg-gradient-to-r from-cyber-purple/10 via-transparent to-cyber-blue/10 rounded-2xl">
+                </div>
+
+                <!-- Logo Section -->
+                <div class="flex items-center space-x-3 px-2 py-1 relative z-10">
+                    <div
+                        class="w-10 h-10 bg-gradient-to-br from-cyber-purple via-purple-500 to-cyber-blue rounded-xl flex items-center justify-center shadow-lg ring-2 ring-white/20">
+                        <i class="fas fa-wallet text-white text-lg"></i>
+                    </div>
+                    <span
+                        class="text-xl font-black bg-gradient-to-r from-cyber-purple via-purple-400 to-cyber-blue bg-clip-text text-transparent hidden sm:block tracking-tight">Spendr</span>
+                </div>
+
+                <!-- Separator -->
+                <div
+                    class="w-px h-8 bg-gradient-to-b from-transparent via-white/30 to-transparent mx-3 hidden sm:block">
+                </div>
+
+                <!-- Navigation Items -->
+                <div class="flex items-center justify-center gap-1 relative z-10">
+                    <a href="#features" class="nav-item active" data-nav="features">
+                        <span class="nav-text">Features</span>
+                        <div class="nav-glow"></div>
+                    </a>
+                    <a href="#pricing" class="nav-item" data-nav="pricing">
+                        <span class="nav-text">Pricing</span>
+                        <div class="nav-glow"></div>
+                    </a>
+                    <a href="#about" class="nav-item" data-nav="about">
+                        <span class="nav-text">About</span>
+                        <div class="nav-glow"></div>
+                    </a>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="ml-3 pl-3 border-l border-white/20 hidden sm:block relative z-10">
+                    <button onclick="window.open('http://localhost:5173/auth', '_blank')"
+                        class="bg-gradient-to-r from-cyber-purple to-cyber-blue px-6 py-2.5 rounded-xl text-white font-bold text-sm hover:shadow-cyber-lg transition-all duration-300 transform hover:scale-105 ring-1 ring-white/20"
+                        id="getStartedBtn">
+                        <i class="fas fa-rocket mr-2"></i>
+                        Get Started
+                    </button>
+                </div>
+
+                <!-- Mobile CTA -->
+                <button onclick="window.open('http://localhost:5173/auth', '_blank')"
+                    class="nav-item get-started-btn sm:hidden ml-1" id="getStartedBtnMobile" data-nav="get-started">
+                    <i class="fas fa-rocket nav-icon"></i>
+                    <div class="nav-glow"></div>
+                </button>
+            </div>
+
+            <!-- Ambient Glow Effect -->
+            <div
+                class="absolute inset-0 bg-gradient-to-r from-cyber-purple/20 to-cyber-blue/20 rounded-2xl blur-xl -z-10 opacity-50">
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+        class="hero-section min-h-screen bg-gradient-to-br from-dark-bg via-dark-secondary to-dark-accent relative flex items-center justify-center">
+
+        
+        <spline-viewer url="https://prod.spline.design/h73IsQ7Ku2gYox4a/scene.splinecode"></spline-viewer>
+        
+        <!-- Transparent overlay div -->
+        <div class="absolute inset-0 bg-transparent z-10 pointer-events-none"></div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="py-20 bg-dark-bg relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0">
+            <div class="absolute top-0 left-1/4 w-64 h-64 bg-cyber-purple/5 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 right-1/4 w-80 h-80 bg-cyber-blue/5 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Content Hero -->
+                <div class="space-y-8">
+                    <div class="space-y-6">
+                        <h2 class="text-5xl lg:text-6xl font-black leading-tight">
+                            Master Your Portfolio with
+                            <span
+                                class="bg-gradient-to-r from-cyber-purple to-cyber-blue bg-clip-text text-transparent">Intelligence</span>
+                        </h2>
+                        <p class="text-xl text-gray-300 leading-relaxed">
+                            Transform your investment journey with intelligent portfolio tracking, AI-powered market
+                            insights, and
+                            gamified learning. Build wealth while mastering the art of smart investing.
+                        </p>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button onclick="window.open('http://localhost:5173/auth', '_blank')"
+                            class="group bg-gradient-to-r from-cyber-purple to-cyber-blue px-8 py-4 rounded-2xl text-white font-bold text-lg hover:shadow-cyber-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-3"
+                            id="startJourneyBtn">
+                            <i class="fas fa-chart-line group-hover:animate-bounce"></i>
+                            <span>Start Investing</span>
+                        </button>
+                        <button
+                            class="group border-2 border-cyber-purple/50 hover:border-cyber-purple px-8 py-4 rounded-2xl text-cyber-purple hover:bg-cyber-purple/10 font-bold text-lg transition-all duration-300 flex items-center justify-center space-x-3"
+                            id="watchDemoBtn">
+                            <i class="fas fa-play group-hover:animate-pulse"></i>
+                            <span>Watch Demo</span>
+                        </button>
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="grid grid-cols-3 gap-6 mt-12">
+                        <div class="text-center space-y-2">
+                            <div class="text-3xl font-black text-cyber-purple">50k+</div>
+                            <div class="text-sm text-gray-400 uppercase tracking-wider">Investors</div>
+                        </div>
+                        <div class="text-center space-y-2">
+                            <div class="text-3xl font-black text-cyber-blue">₹250Cr+</div>
+                            <div class="text-sm text-gray-400 uppercase tracking-wider">Assets Managed</div>
+                        </div>
+                        <div class="text-center space-y-2">
+                            <div class="text-3xl font-black text-yellow-400">4.9★</div>
+                            <div class="text-sm text-gray-400 uppercase tracking-wider">App Rating</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Futuristic Dashboard Preview -->
+                <div class="relative">
+                    <div
+                        class="bg-gradient-to-br from-dark-secondary/80 to-dark-accent/80 backdrop-blur-xl rounded-3xl p-8 border border-white/10 shadow-cyber-lg">
+                        <!-- Dashboard Header -->
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="flex space-x-1">
+                                <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                                <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                                <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                            </div>
+                            <div class="text-xs text-gray-400 font-mono">spendr.app</div>
+                        </div>
+
+                        <!-- Tab Navigation -->
+                        <div class="flex space-x-2 mb-6 bg-dark-bg/50 p-2 rounded-xl">
+                            <button
+                                class="px-4 py-2 bg-gradient-to-r from-cyber-purple to-cyber-blue text-white rounded-lg text-sm font-medium shadow-cyber">Portfolio</button>
+                            <button
+                                class="px-4 py-2 text-gray-400 hover:text-white transition-colors text-sm font-medium">Stocks</button>
+                            <button
+                                class="px-4 py-2 text-gray-400 hover:text-white transition-colors text-sm font-medium">Analytics</button>
+                        </div>
+
+                        <!-- Dashboard Content -->
+                        <div class="space-y-4">
+                            <!-- Welcome Card -->
+                            <div
+                                class="bg-gradient-to-r from-cyber-purple/20 to-cyber-blue/20 rounded-xl p-4 border border-cyber-purple/30">
+                                <h3 class="text-white font-semibold mb-1">Welcome Back, Investor! �</h3>
+                                <p class="text-gray-300 text-sm">Your portfolio is up 12.5% this month!</p>
+                            </div>
+
+                            <!-- Stats Grid -->
+                            <div class="grid grid-cols-2 gap-3">
+                                <div class="bg-gradient-to-br from-purple-600 to-purple-700 rounded-xl p-4 text-white">
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <div class="text-2xl font-bold">₹3,45,280</div>
+                                            <div class="text-purple-200 text-xs">Portfolio Value</div>
+                                        </div>
+                                        <i class="fas fa-chart-pie text-purple-200"></i>
+                                    </div>
+                                </div>
+                                <div class="bg-gradient-to-br from-green-600 to-green-700 rounded-xl p-4 text-white">
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <div class="text-2xl font-bold">+₹32,450</div>
+                                            <div class="text-green-200 text-xs">Total Gains</div>
+                                        </div>
+                                        <i class="fas fa-arrow-trend-up text-green-200"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Progress Bars -->
+                            <div class="space-y-3">
+                                <div>
+                                    <div class="flex justify-between text-sm mb-1">
+                                        <span class="text-gray-300">Tech Stocks</span>
+                                        <span class="text-cyber-purple">45%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-700 rounded-full h-2">
+                                        <div class="bg-gradient-to-r from-cyber-purple to-purple-400 h-2 rounded-full"
+                                            style="width: 45%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-sm mb-1">
+                                        <span class="text-gray-300">Mutual Funds</span>
+                                        <span class="text-cyber-blue">35%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-700 rounded-full h-2">
+                                        <div class="bg-gradient-to-r from-cyber-blue to-blue-400 h-2 rounded-full"
+                                            style="width: 35%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Floating Elements -->
+                    <div class="absolute -top-4 -right-4 w-8 h-8 bg-cyber-purple rounded-full animate-ping"></div>
+                    <div class="absolute -bottom-4 -left-4 w-6 h-6 bg-cyber-blue rounded-full animate-pulse"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Keep existing sections below -->
+    <div style="display: none;">
+        <div class="content-visual">
+            <div class="dashboard-preview">
+                <div class="preview-header">
+                    <div class="preview-nav">
+                        <div class="nav-item active" data-tab="dashboard">Dashboard</div>
+                        <div class="nav-item" data-tab="budget">Budget</div>
+                        <div class="nav-item" data-tab="goals">Goals</div>
+                    </div>
+                </div>
+
+                <!-- Dashboard Content -->
+                <div class="preview-content tab-content active" id="dashboard-content">
+                    <div class="welcome-card">
+                        <h3>Welcome!! </h3>
+                        <p>You're on level 3 and doing great!</p>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-card purple">
+                            <i class="fas fa-star"></i>
+                            <div class="stat-info">
+                                <span class="stat-value">3</span>
+                                <span class="stat-name">Level</span>
+                            </div>
+                        </div>
+                        <div class="stat-card orange">
+                            <i class="fas fa-trophy"></i>
+                            <div class="stat-info">
+                                <span class="stat-value">1,250</span>
+                                <span class="stat-name">Total XP</span>
+                            </div>
+                        </div>
+                        <div class="stat-card green">
+                            <i class="fas fa-coins"></i>
+                            <div class="stat-info">
+                                <span class="stat-value">850</span>
+                                <span class="stat-name">Coins</span>
+                            </div>
+                        </div>
+                        <div class="stat-card blue">
+                            <i class="fas fa-piggy-bank"></i>
+                            <div class="stat-info">
+                                <span class="stat-value">₹1,80,000</span>
+                                <span class="stat-name">Saved</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Budget Content -->
+                <div class="preview-content tab-content" id="budget-content">
+                    <div class="welcome-card">
+                        <h3>Budget Overview</h3>
+                        <p>Track your monthly spending</p>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-card purple">
+                            <i class="fas fa-wallet"></i>
+                            <div class="stat-info">
+                                <span class="stat-value">₹35,000</span>
+                                <span class="stat-name">Budget</span>
+                            </div>
+                        </div>
+                        <div class="stat-card red">
+                            <i class="fas fa-credit-card"></i>
+                            <div class="stat-info">
+                                <span class="stat-value">₹28,500</span>
+                                <span class="stat-name">Spent</span>
+                            </div>
+                        </div>
+                        <div class="stat-card green">
+                            <i class="fas fa-coins"></i>
+                            <div class="stat-info">
+                                <span class="stat-value">₹6,500</span>
+                                <span class="stat-name">Left</span>
+                            </div>
+                        </div>
+                        <div class="stat-card teal">
+                            <i class="fas fa-chart-pie"></i>
+                            <div class="stat-info">
+                                <span class="stat-value">81%</span>
+                                <span class="stat-name">Used</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Goals Content -->
+                <div class="preview-content tab-content" id="goals-content">
+                    <div class="welcome-card">
+                        <h3>Savings Goals</h3>
+                        <p>You're 72% towards your goals!</p>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-card purple">
+                            <i class="fas fa-mobile-alt"></i>
+                            <div class="stat-info">
+                                <span class="stat-value">80%</span>
+                                <span class="stat-name">iPhone</span>
+                            </div>
+                        </div>
+                        <div class="stat-card orange">
+                            <i class="fas fa-shield-alt"></i>
+                            <div class="stat-info">
+                                <span class="stat-value">67%</span>
+                                <span class="stat-name">Emergency</span>
+                            </div>
+                        </div>
+                        <div class="stat-card green">
+                            <i class="fas fa-target"></i>
+                            <div class="stat-info">
+                                <span class="stat-value">₹2.5L</span>
+                                <span class="stat-name">Target</span>
+                            </div>
+                        </div>
+                        <div class="stat-card blue">
+                            <i class="fas fa-piggy-bank"></i>
+                            <div class="stat-info">
+                                <span class="stat-value">₹1.8L</span>
+                                <span class="stat-name">Saved</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- Premium Financial Overview -->
+    <section id="budget-goals" class="py-32 relative overflow-hidden">
+        <!-- Elegant Background Layers -->
+        <div class="absolute inset-0">
+            <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900/10 to-slate-900"></div>
+            <div
+                class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(120,119,198,0.15),transparent_70%)] opacity-40">
+            </div>
+        </div>
+
+        <div class="container mx-auto px-8 relative z-10">
+            <!-- Sophisticated Header -->
+            <div class="text-center mb-24">
+                <div>
+
+                    <h2 class="text-6xl md:text-7xl font-extralight text-white tracking-tight">Budgeting Made Simple.
+                        <br>
+                        Goals Made Achievable
+                    </h2>
+                </div>
+            </div>
+
+            <!-- Goals & Categories Layout with Circles Above -->
+            <div class="grid lg:grid-cols-2 gap-24">
+                <!-- Financial Goals -->
+                <div>
+                    <!-- Goals Circle -->
+                    <div class="flex justify-center mb-16">
+                        <div class="relative">
+                            <div class="w-80 h-80 relative">
+                                <svg class="w-full h-full transform -rotate-90" viewBox="0 0 160 160">
+                                    <!-- Background Circle -->
+                                    <circle cx="80" cy="80" r="70" fill="none" stroke="rgba(255,255,255,0.03)"
+                                        stroke-width="4" />
+                                    <!-- Progress Circle for Goals -->
+                                    <circle cx="80" cy="80" r="70" fill="none" stroke="url(#goalsGradient)"
+                                        stroke-width="8" stroke-linecap="round" stroke-dasharray="440"
+                                        stroke-dashoffset="119" class="transition-all duration-3000 ease-out" />
+                                </svg>
+
+                                <!-- Central Content -->
+                                <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+                                    <div class="text-4xl font-extralight text-white mb-2">₹2,18,000</div>
+                                    <div class="text-base text-slate-400 mb-1">saved for goals</div>
+                                    <div class="text-sm text-emerald-400 font-medium tracking-wide">73% COMPLETE</div>
+                                </div>
+
+                                <!-- Floating Active Goals -->
+                                <div class="absolute -top-6 -left-6">
+                                    <div
+                                        class="bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-4 text-center">
+                                        <div class="text-lg font-light text-white">3</div>
+                                        <div class="text-xs text-slate-400 uppercase tracking-wider">Active</div>
+                                        <div class="text-xs text-blue-400 mt-1">Goals</div>
+                                    </div>
+                                </div>
+
+                                <!-- Floating Target Amount -->
+                                <div class="absolute -bottom-6 -right-6">
+                                    <div
+                                        class="bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-4 text-center">
+                                        <div class="text-lg font-light text-white">₹3,00,000</div>
+                                        <div class="text-xs text-slate-400 uppercase tracking-wider">Target</div>
+                                        <div class="text-xs text-purple-400 mt-1">Total</div>
+                                    </div>
+                                </div>
+
+                                <!-- Glow Effect -->
+                                <div
+                                    class="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-500/20 to-blue-500/20 blur-3xl -z-10">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-12">
+                        <h3 class="text-3xl font-light text-white mb-3">Financial Goals</h3>
+                        <div class="w-24 h-1 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full"></div>
+                    </div>
+
+                    <div class="space-y-8">
+                        <div class="group">
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center gap-4">
+                                    <div
+                                        class="w-14 h-14 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-purple-500/25 transition-all duration-300">
+                                        <i class="fas fa-gamepad text-white text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-xl font-medium text-white">Gaming PC</div>
+                                        <div class="text-slate-400">₹38,000 of ₹50,000</div>
+                                    </div>
+                                </div>
+                                <div class="text-2xl font-light text-purple-400">76%</div>
+                            </div>
+                            <div class="luxury-progress">
+                                <div class="luxury-progress-fill"
+                                    style="width: 76%; --progress-color: linear-gradient(90deg, #a855f7, #ec4899);">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="group">
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center gap-4">
+                                    <div
+                                        class="w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-blue-500/25 transition-all duration-300">
+                                        <i class="fas fa-plane text-white text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-xl font-medium text-white">Japan Trip</div>
+                                        <div class="text-slate-400">₹80,000 of ₹1,50,000</div>
+                                    </div>
+                                </div>
+                                <div class="text-2xl font-light text-blue-400">53%</div>
+                            </div>
+                            <div class="luxury-progress">
+                                <div class="luxury-progress-fill"
+                                    style="width: 53%; --progress-color: linear-gradient(90deg, #3b82f6, #06b6d4);">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="group">
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center gap-4">
+                                    <div
+                                        class="w-14 h-14 bg-gradient-to-br from-emerald-500 to-green-500 rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-emerald-500/25 transition-all duration-300">
+                                        <i class="fas fa-shield-alt text-white text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-xl font-medium text-white">Emergency Fund</div>
+                                        <div class="text-slate-400">₹1,00,000 of ₹1,00,000</div>
+                                    </div>
+                                </div>
+                                <div class="text-2xl font-light text-emerald-400">100%</div>
+                            </div>
+                            <div class="luxury-progress">
+                                <div class="luxury-progress-fill completed"
+                                    style="width: 100%; --progress-color: linear-gradient(90deg, #10b981, #22c55e);">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Spending Categories -->
+                <div>
+                    <!-- Budget Circle -->
+                    <div class="flex justify-center mb-16">
+                        <div class="relative">
+                            <div class="w-80 h-80 relative">
+                                <svg class="w-full h-full transform -rotate-90" viewBox="0 0 160 160">
+                                    <!-- Background Circle -->
+                                    <circle cx="80" cy="80" r="70" fill="none" stroke="rgba(255,255,255,0.03)"
+                                        stroke-width="4" />
+                                    <!-- Progress Circle -->
+                                    <circle cx="80" cy="80" r="70" fill="none" stroke="url(#budgetGradient)"
+                                        stroke-width="8" stroke-linecap="round" stroke-dasharray="440"
+                                        stroke-dashoffset="158" class="transition-all duration-3000 ease-out" />
+                                </svg>
+
+                                <!-- Central Content -->
+                                <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+                                    <div class="text-4xl font-extralight text-white mb-2">₹22,500</div>
+                                    <div class="text-base text-slate-400 mb-1">spent this month</div>
+                                    <div class="text-sm text-purple-400 font-medium tracking-wide">64% OF BUDGET</div>
+                                </div>
+
+                                <!-- Floating Income Stat -->
+                                <div class="absolute -top-6 -right-6">
+                                    <div
+                                        class="bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-4 text-center">
+                                        <div class="text-lg font-light text-white">₹45,000</div>
+                                        <div class="text-xs text-slate-400 uppercase tracking-wider">Income</div>
+                                        <div class="text-xs text-emerald-400 mt-1">+12%</div>
+                                    </div>
+                                </div>
+
+                                <!-- Floating Remaining Stat -->
+                                <div class="absolute -bottom-6 -left-6">
+                                    <div
+                                        class="bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-4 text-center">
+                                        <div class="text-lg font-light text-white">₹12,500</div>
+                                        <div class="text-xs text-slate-400 uppercase tracking-wider">Remaining</div>
+                                        <div class="text-xs text-blue-400 mt-1">36% left</div>
+                                    </div>
+                                </div>
+
+                                <!-- Glow Effect -->
+                                <div
+                                    class="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500/20 to-cyan-500/20 blur-3xl -z-10">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-12">
+                        <h3 class="text-3xl font-light text-white mb-3">Spending Categories</h3>
+                        <div class="w-24 h-1 bg-gradient-to-r from-orange-500 to-red-500 rounded-full"></div>
+                    </div>
+
+                    <div class="space-y-8">
+                        <div class="group">
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center gap-4">
+                                    <div
+                                        class="w-14 h-14 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-orange-500/25 transition-all duration-300">
+                                        <i class="fas fa-utensils text-white text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-xl font-medium text-white">Food & Dining</div>
+                                        <div class="text-slate-400">₹8,500 of ₹10,000</div>
+                                    </div>
+                                </div>
+                                <div class="text-2xl font-light text-orange-400">85%</div>
+                            </div>
+                            <div class="luxury-progress">
+                                <div class="luxury-progress-fill"
+                                    style="width: 85%; --progress-color: linear-gradient(90deg, #f97316, #ef4444);">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="group">
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center gap-4">
+                                    <div
+                                        class="w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-blue-500/25 transition-all duration-300">
+                                        <i class="fas fa-car text-white text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-xl font-medium text-white">Transportation</div>
+                                        <div class="text-slate-400">₹4,200 of ₹5,000</div>
+                                    </div>
+                                </div>
+                                <div class="text-2xl font-light text-cyan-400">84%</div>
+                            </div>
+                            <div class="luxury-progress">
+                                <div class="luxury-progress-fill"
+                                    style="width: 84%; --progress-color: linear-gradient(90deg, #3b82f6, #06b6d4);">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="group">
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center gap-4">
+                                    <div
+                                        class="w-14 h-14 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-purple-500/25 transition-all duration-300">
+                                        <i class="fas fa-shopping-bag text-white text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-xl font-medium text-white">Shopping</div>
+                                        <div class="text-slate-400">₹6,800 of ₹8,000</div>
+                                    </div>
+                                </div>
+                                <div class="text-2xl font-light text-purple-400">85%</div>
+                            </div>
+                            <div class="luxury-progress">
+                                <div class="luxury-progress-fill"
+                                    style="width: 85%; --progress-color: linear-gradient(90deg, #a855f7, #ec4899);">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SVG Gradients for Circles -->
+            <svg width="0" height="0">
+                <defs>
+                    <linearGradient id="budgetGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#8b5cf6" />
+                        <stop offset="50%" style="stop-color:#06b6d4" />
+                        <stop offset="100%" style="stop-color:#8b5cf6" />
+                    </linearGradient>
+                    <linearGradient id="goalsGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#10b981" />
+                        <stop offset="50%" style="stop-color:#3b82f6" />
+                        <stop offset="100%" style="stop-color:#10b981" />
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features"
+        class="py-32 bg-gradient-to-br from-dark-bg via-dark-secondary to-dark-accent relative overflow-hidden">
+        <!-- Animated Background Elements -->
+        <div class="absolute inset-0">
+            <div class="absolute top-20 left-10 w-96 h-96 bg-cyber-purple/5 rounded-full blur-3xl animate-pulse"></div>
+            <div
+                class="absolute bottom-20 right-10 w-80 h-80 bg-cyber-blue/5 rounded-full blur-3xl animate-pulse delay-1000">
+            </div>
+            <div
+                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-cyber-purple/3 to-cyber-blue/3 rounded-full blur-2xl animate-spin-slow">
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center mb-20">
+                <h2
+                    class="text-6xl lg:text-7xl font-black mb-6 bg-gradient-to-r from-cyber-purple via-purple-400 to-cyber-blue bg-clip-text text-transparent">
+                    Next-Gen Features
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                    Experience the future of financial management with AI-powered insights and gamified interactions
+                </p>
+            </div>
+
+            <!-- Floating Features Layout -->
+            <div class="relative">
+                <!-- Central Hub -->
+                <div
+                    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-gradient-to-br from-cyber-purple to-cyber-blue rounded-full flex items-center justify-center shadow-cyber-lg">
+                    <i class="fas fa-wallet text-white text-3xl"></i>
+                </div>
+
+                <!-- Orbiting Feature Cards -->
+                <div class="feature-orbit">
+                    <!-- Feature 1 - Gamified Experience -->
+                    <div class="feature-satellite"
+                        style="--orbit-radius: 280px; --orbit-angle: 0deg; --animation-delay: 0s;">
+                        <div class="holographic-card group cursor-pointer">
+                            <div class="card-glow"></div>
+                            <div class="card-content">
+                                <div class="feature-icon-holo purple">
+                                    <i class="fas fa-gamepad"></i>
+                                    <div class="icon-particles"></div>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-2">Gamified Experience</h3>
+                                <p class="text-gray-300 text-sm">Level Up & Conquer</p>
+                            </div>
+                            <div class="card-border"></div>
+                        </div>
+                    </div>
+
+                    <!-- Feature 2 - Smart Analytics -->
+                    <div class="feature-satellite"
+                        style="--orbit-radius: 280px; --orbit-angle: 60deg; --animation-delay: -1s;">
+                        <div class="holographic-card group cursor-pointer">
+                            <div class="card-glow"></div>
+                            <div class="card-content">
+                                <div class="feature-icon-holo blue">
+                                    <i class="fas fa-chart-line"></i>
+                                    <div class="icon-particles"></div>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-2">Smart Analytics</h3>
+                                <p class="text-gray-300 text-sm">AI-powered insights and personalized recommendations
+                                </p>
+                            </div>
+                            <div class="card-border"></div>
+                        </div>
+                    </div>
+
+                    <!-- Feature 3 - Goal Tracking -->
+                    <div class="feature-satellite"
+                        style="--orbit-radius: 280px; --orbit-angle: 120deg; --animation-delay: -2s;">
+                        <div class="holographic-card group cursor-pointer">
+                            <div class="card-glow"></div>
+                            <div class="card-content">
+                                <div class="feature-icon-holo green">
+                                    <i class="fas fa-target"></i>
+                                    <div class="icon-particles"></div>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-2">Goal Tracking</h3>
+                                <p class="text-gray-300 text-sm">Intelligent tracking system for financial milestones
+                                </p>
+                            </div>
+                            <div class="card-border"></div>
+                        </div>
+                    </div>
+
+                    <!-- Feature 4 - Financial Education -->
+                    <div class="feature-satellite"
+                        style="--orbit-radius: 280px; --orbit-angle: 180deg; --animation-delay: -3s;">
+                        <div class="holographic-card group cursor-pointer">
+                            <div class="card-glow"></div>
+                            <div class="card-content">
+                                <div class="feature-icon-holo orange">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <div class="icon-particles"></div>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-2">Financial Education</h3>
+                                <p class="text-gray-300 text-sm">Real-world simulations</p>
+                            </div>
+                            <div class="card-border"></div>
+                        </div>
+                    </div>
+
+                    <!-- Feature 5 - Secure & Private -->
+                    <div class="feature-satellite"
+                        style="--orbit-radius: 280px; --orbit-angle: 240deg; --animation-delay: -4s;">
+                        <div class="holographic-card group cursor-pointer">
+                            <div class="card-glow"></div>
+                            <div class="card-content">
+                                <div class="feature-icon-holo red">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <div class="icon-particles"></div>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-2">Secure & Private</h3>
+                                <p class="text-gray-300 text-sm">Bank-level security with end-to-end encryption</p>
+                            </div>
+                            <div class="card-border"></div>
+                        </div>
+                    </div>
+
+                    <!-- Feature 6 - Cross-Platform -->
+                    <div class="feature-satellite"
+                        style="--orbit-radius: 280px; --orbit-angle: 300deg; --animation-delay: -5s;">
+                        <div class="holographic-card group cursor-pointer">
+                            <div class="card-glow"></div>
+                            <div class="card-content">
+                                <div class="feature-icon-holo teal">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <div class="icon-particles"></div>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-2">Cross-Platform</h3>
+                                <p class="text-gray-300 text-sm">Access anywhere, anytime on any device</p>
+                            </div>
+                            <div class="card-border"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Connection Lines -->
+                <div class="connection-lines">
+                    <svg class="absolute inset-0 w-full h-full" viewBox="0 0 800 600">
+                        <g class="connection-group">
+                            <line x1="400" y1="300" x2="680" y2="300" stroke="url(#lineGradient)" stroke-width="2"
+                                opacity="0.5" class="animate-pulse" />
+                            <line x1="400" y1="300" x2="540" y2="157" stroke="url(#lineGradient)" stroke-width="2"
+                                opacity="0.5" class="animate-pulse" style="animation-delay: 0.5s;" />
+                            <line x1="400" y1="300" x2="260" y2="157" stroke="url(#lineGradient)" stroke-width="2"
+                                opacity="0.5" class="animate-pulse" style="animation-delay: 1s;" />
+                            <line x1="400" y1="300" x2="120" y2="300" stroke="url(#lineGradient)" stroke-width="2"
+                                opacity="0.5" class="animate-pulse" style="animation-delay: 1.5s;" />
+                            <line x1="400" y1="300" x2="260" y2="443" stroke="url(#lineGradient)" stroke-width="2"
+                                opacity="0.5" class="animate-pulse" style="animation-delay: 2s;" />
+                            <line x1="400" y1="300" x2="540" y2="443" stroke="url(#lineGradient)" stroke-width="2"
+                                opacity="0.5" class="animate-pulse" style="animation-delay: 2.5s;" />
+                        </g>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing"
+        class="py-20 bg-gradient-to-br from-dark-bg via-dark-secondary to-dark-accent relative overflow-hidden">
+
+        <spline-viewer url="./scene.splinecode"></spline-viewer>
+
+        <!-- Background Elements -->
+        <div class="absolute inset-0">
+            <div class="absolute top-20 left-1/4 w-96 h-96 bg-cyber-purple/5 rounded-full blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-20 right-1/4 w-80 h-80 bg-cyber-blue/5 rounded-full blur-3xl animate-pulse">
+            </div>
+            <div
+                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-cyber-purple/3 to-cyber-blue/3 rounded-full blur-2xl">
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2
+                    class="text-5xl lg:text-6xl font-black mb-6 bg-gradient-to-r from-cyber-purple via-purple-400 to-cyber-blue bg-clip-text text-transparent">
+                    AI-Powered Investment Plans
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                    We have AI assistance for smart investment and AI analytics<br>
+                    Experience intelligent portfolio management with advanced market insights.
+                </p>
+            </div>
+
+            <!-- Billing Toggle -->
+            <div class="flex justify-center items-center mb-12">
+                <span class="text-white font-semibold mr-4">Monthly</span>
+                <div class="relative">
+                    <input type="checkbox" id="billing-toggle" class="sr-only" onchange="toggleBilling()">
+                    <label for="billing-toggle" class="flex items-center cursor-pointer">
+                        <div class="relative">
+                            <div class="block bg-gray-600 w-14 h-8 rounded-full"></div>
+                            <div class="dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition transform">
+                            </div>
+                        </div>
+                    </label>
+                </div>
+                <span class="text-white font-semibold ml-4">
+                    Annual <span class="text-cyber-purple">(Save 15%)</span>
+                </span>
+            </div>
+
+            <!-- Pricing Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Freemium Plan -->
+                <div
+                    class="pricing-card bg-gradient-to-br from-dark-secondary/80 to-dark-accent/80 backdrop-blur-xl rounded-3xl p-8 border border-white/10 shadow-cyber-lg transform hover:scale-105 transition-all duration-300">
+                    <div class="text-center mb-8">
+                        <h3 class="text-xl font-bold text-gray-300 mb-4">FREEMIUM</h3>
+                        <div class="text-5xl font-black text-white mb-2">
+                            FREE
+                        </div>
+                        <p class="text-gray-400">Perfect to get started</p>
+                    </div>
+
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-cyber-purple mt-1 mr-3 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-300">Portfolio Management</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-cyber-purple mt-1 mr-3 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-300">Basic Lessons</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-cyber-purple mt-1 mr-3 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-300">Progress Tracking</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-cyber-purple mt-1 mr-3 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-300">1 Week Trial of AI dvisor</span>
+                
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-cyber-purple mt-1 mr-3 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-300">Budget Manager</span>
+                        </li>
+                    </ul>
+
+                    <button onclick="window.open('http://localhost:5173/auth', '_blank')"
+                        class="w-full bg-gradient-to-r from-gray-600 to-gray-700 hover:from-gray-500 hover:to-gray-600 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105">
+                        Get Started
+                    </button>
+                </div>
+
+                <!-- Student Plan (Popular) -->
+                <div
+                    class="pricing-card bg-gradient-to-br from-dark-secondary/80 to-dark-accent/80 backdrop-blur-xl rounded-3xl p-8 border-2 border-cyber-purple shadow-cyber-lg transform hover:scale-105 transition-all duration-300 relative">
+                    <!-- Popular Badge -->
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <div
+                            class="bg-gradient-to-r from-cyber-purple to-purple-600 text-white px-6 py-2 rounded-full text-sm font-bold flex items-center">
+                            <svg class="w-4 h-4 mr-2 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            Popular
+                        </div>
+                    </div>
+
+                    <div class="text-center mb-8 mt-4">
+                        <h3 class="text-xl font-bold text-gray-300 mb-4">STUDENT</h3>
+                        <div class="text-5xl font-black text-white mb-2">
+                            <span class="price-amount" data-monthly="₹99" data-yearly="₹85">₹99</span>
+                        </div>
+                        <p class="text-gray-400 billing-period">per month</p>
+                        <p class="text-sm text-gray-500 billing-info">billed monthly</p>
+                    </div>
+
+                    <ul class="space-y-4 mb-8">
+                        <!-- <li class="flex items-start">
+                            <svg class="w-5 h-5 text-cyber-purple mt-1 mr-3 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-300">All Lessons</span>
+                        </li> -->
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-cyber-purple mt-1 mr-3 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-300">Unlimited AI Advisor</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-cyber-purple mt-1 mr-3 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-300">Investment Suggestions</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-cyber-purple mt-1 mr-3 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-300">Paper Trading</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-cyber-purple mt-1 mr-3 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-300">Expense Manager</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-cyber-purple mt-1 mr-3 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-300">Progress Tracking</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-cyber-purple mt-1 mr-3 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-300">Game</span>
+                        </li>
+                    </ul>
+
+                    <button
+                        class="w-full bg-gradient-to-r from-cyber-purple to-purple-600 hover:from-purple-600 hover:to-cyber-purple text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105">
+                        Buy Now
+                    </button>
+                </div>
+
+                <!-- Premium Plan -->
+                <div
+                    class="pricing-card bg-gradient-to-br from-dark-secondary/80 to-dark-accent/80 backdrop-blur-xl rounded-3xl p-8 border border-white/10 shadow-cyber-lg transform hover:scale-105 transition-all duration-300">
+                    <div class="text-center mb-8">
+                        <h3 class="text-xl font-bold text-gray-300 mb-4">PREMIUM</h3>
+                        <div class="text-5xl font-black text-white mb-2">
+                            <span class="price-amount" data-monthly="₹199" data-yearly="₹169">₹199</span>
+                        </div>
+                        <p class="text-gray-400 billing-period">per month</p>
+                        <p class="text-sm text-gray-500 billing-info">billed monthly</p>
+                    </div>
+
+                    <ul class="space-y-4 mb-8">
+                        <!-- <li class="flex items-start">
+                            <svg class="w-5 h-5 text-cyber-purple mt-1 mr-3 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-300">All Lessons</span>
+                        </li> -->
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-cyber-purple mt-1 mr-3 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-300">Unlimited AI Advisor</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-cyber-purple mt-1 mr-3 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-300">Investment Suggestions</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-cyber-purple mt-1 mr-3 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-300">Paper Trading</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-cyber-purple mt-1 mr-3 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-300">Expense Manager</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-cyber-purple mt-1 mr-3 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-300">Progress Tracking</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-cyber-purple mt-1 mr-3 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-300">Game</span>
+                        </li>
+                    </ul>
+
+                    <button
+                        class="w-full bg-gradient-to-r from-cyber-blue to-blue-600 hover:from-blue-600 hover:to-cyber-blue text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105">
+                        Buy Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="fas fa-wallet"></i>
+                        <span>Spendr</span>
+                    </div>
+                    <p>Making financial management fun and rewarding for everyone.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <a href="#">Features</a>
+                        <a href="#">Pricing</a>
+                        <a href="#">Security</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <a href="#">About</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Contact</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <a href="#">Help Center</a>
+                        <a href="#">Community</a>
+                        <a href="#">Blog</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Spendr. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
