@@ -14,7 +14,7 @@
   <img src="https://img.shields.io/github/languages/top/ChaitanyDalvi06/Spendr" alt="Top Language">
 </p>
 
----
+--- 
 
 ## 🌟 Overview
 
